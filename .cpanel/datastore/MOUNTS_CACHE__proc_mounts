@@ -1,0 +1,13 @@
+proc /proc proc rw,relatime,gid=999,hidepid=2 0 0
+sysfs /sys sysfs rw,relatime 0 0
+devtmpfs /dev devtmpfs rw,relatime,size=37102256k,nr_inodes=9275564,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /dev/shm tmpfs rw,relatime 0 0
+/dev/sda1 / ext4 rw,noatime,barrier=1,data=ordered,jqfmt=vfsv1,usrjquota=quota.user 0 0
+/proc/bus/usb /proc/bus/usb usbfs rw,relatime 0 0
+tmpfs /tmp/mysqltmp tmpfs rw,nosuid,nodev,noexec,relatime,size=4194304k 0 0
+tmpfs /tmp/cpm tmpfs rw,relatime,size=512000k 0 0
+none /proc/sys/fs/binfmt_misc binfmt_misc rw,relatime 0 0
+none /var/lve/dbgovernor-shm tmpfs rw,nosuid,nodev,relatime 0 0
+sentitrace /opt/sentinelone/mount debugfs rw,nodev,relatime 0 0
+/dev/sda1 /opt/sentinelone/rpm_mount ext4 ro,relatime,barrier=1,data=ordered,jqfmt=vfsv1,usrjquota=quota.user 0 0
